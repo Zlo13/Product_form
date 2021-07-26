@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test form</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body class="page__body body">
+
+    <button class="error__btn">Создать ошибку</button>
+    <form action="/" id="form" method="post" class="form">
+        <!-- ---------------------Home------------------------ -->
+        <div class="form__home">
+            <div class="form__item">
+                <h3 class="form__title">Info</h3>
+                <label class="form__label">
+                    Enter your email address
+                    <input type="email" name="email" class="form__input" placeholder="team@checkforpatent.com">
+                </label>
+            </div>
+
+            <div class="form__item-prod">
+                <h3 class="form__title">Product 1</h3>
+                <label class="form__label">
+                    Enter main keyword for the product
+                    <input type="text" name="keyword" class="form__input" placeholder="for example, sylicon wine cup">
+                </label>
+                <label class="form__label">
+                    Enter link to the similar product as a reference
+                    <input type="text" name="link" class="form__input" placeholder="https://...">
+                </label>
+            </div>
+
+            <button type="button" class="form__add-btn">
+                Add more products
+            </button>
+            <p class="add__subtitle">We offer discount up to 36% for multiple checks</p>
+        </div>
+        <!-- ---------------------Products------------------------ -->
+        <div class="form__products products">
+
+            <h3 class="products__title">Adding more products</h3>
+            <p class="products__subtitle">The more items you check, the better the price.</p>
+
+            <ul class="products__list">
+                <li class="products__item prod">
+                    <label class="prod__label">
+                        <input class="prod__input" type="radio" name="prod" checked value="5">
+                        5 products for 80 usd / 16$ for each
+                        <div class="prod__subtitle">You safe 36% on each patent check</div>
+                        <div class="rad">
+                            <span class="rad__ring"></span>
+                            <span class="rad__dot"></span>
+                        </div>
+                    </label>
+                </li>
+                <li class="products__item prod">
+                    <label class="prod__label">
+                        <input class="prod__input" type="radio" name="prod" checked value="4">
+                        4 products for 72 usd / 18$ for each
+                        <div class="prod__subtitle">You safe 28% on each patent check</div>
+                        <div class="rad">
+                            <span class="rad__ring"></span>
+                            <span class="rad__dot"></span>
+                        </div>
+                    </label>
+                </li>
+                <li class="products__item prod">
+                    <label class="prod__label">
+                        <input class="prod__input" type="radio" name="prod" checked value="3">
+                        3 products for 60 usd / 20$ for each
+                        <div class="prod__subtitle">You safe 20% on each patent check</div>
+                        <div class="rad">
+                            <span class="rad__ring"></span>
+                            <span class="rad__dot"></span>
+                        </div>
+                    </label>
+                </li>
+                <li class="products__item prod">
+                    <label class="prod__label">
+                        <input class="prod__input" type="radio" name="prod" checked value="2">
+                        2 products for 44 usd / 22$ for each
+                        <div class="prod__subtitle">You safe 12% on each patent check</div>
+                        <div class="rad">
+                            <span class="rad__ring"></span>
+                            <span class="rad__dot"></span>
+                        </div>
+                    </label>
+                </li>
+                <li class="products__item prod">
+                    <label class="prod__label">
+                        <input class="prod__input" type="radio" name="prod" checked value="1">
+                        1 product for 24.99 usd
+                        <div class="prod__subtitle"></div>
+                        <div class="rad">
+                            <span class="rad__ring"></span>
+                            <span class="rad__dot"></span>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+
+            <button type="button" class="products__button button"> Continue </button>
+        </div>
+        <!-- ---------------------paymentsuccess------------------------ -->
+        <div class="form__success success">
+
+            <h3 class="success__title">Successfull payment</h3>
+            <p class="success__subtitle">Your request has been accepted and will be processed within 24 working hours. We will send you a payment details and all information to your email.</p>
+
+            <div class="success__image"></div>
+
+            <button type="button" class="success__button button">Back</button>
+        </div>
+        <!-- ---------------------paymenterror------------------------ -->
+        <div class="form__error error">
+
+            <h3 class="error__title">Your payment failed</h3>
+            <p class="error__subtitle">Sorry, but we’ve having trouble processing your payment. You have been not charged for this transaction.</p>
+
+            <div class="error__image"></div>
+
+            <button type="button" class="error__button button"> Try to pay again </button>
+        </div>
+        <!-- ---------------------Footer------------------------ -->
+        <div class="form__footer">
+            <button type="submit" class="form__button button">
+                <div class="button__info">
+                    Submit and Pay
+                    <span class="button__price">24.99</span>
+                    USD
+                </div>
+                <div class="button__loading"></div>
+            </button>
+            <p class="form__lock">
+                Secure payment with Stripe
+            </p>
+        </div>
+    </form>
+
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
